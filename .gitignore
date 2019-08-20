@@ -1,4 +1,5 @@
 .idea
 env
+media
 *.pyc
 db.sqlite3
