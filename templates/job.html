@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  JOB title
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    {% include 'header.html' %}
+    <div class="row">
+      {% include 'left_sidebar.html' %}
+      <div class="col-sm-6">
+        <h2>{{ job }}</h2>
+        <p>{{ job.start_date }} - {{ job.end_date }}</p>
+        <p><a href="/category/{{ job.category.slug }}/">
+          {{ job.category }}
+        </a></p>
+        <p><a href="/worker/{{ job.user.id }}/">
+          {{ job.user }}
+        </a></p>
+        <div>
+          {% for photo in photos %}
+            <img src="/media/{{ photo.image_field }}" alt="{{ photo.alt }}" class="img-thumbnail">
+          {% endfor %}
+        </div>
+        <div>
+          {{ job.description }}
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+{% endblock %}

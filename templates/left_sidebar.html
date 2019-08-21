@@ -1,0 +1,7 @@
+      <div class="col-sm-3">
+        <div class="list-group">
+          {% for category in categories %}
+            <a class="list-group-item list-group-item-action" href="/category/{{ category.slug }}/">{{ category.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
