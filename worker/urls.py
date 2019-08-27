@@ -11,4 +11,4 @@ urlpatterns = [
     path('category/<slug:slug>/', CategoryView.as_view(), name='category'),
     path('job/<int:id>/', JobView.as_view(), name='job'),
     path('worker/<int:id>/', WorkerView.as_view(), name='worker'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, name='media')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
