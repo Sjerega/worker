@@ -1,0 +1,5 @@
+<div class="list-group">
+  {% for job in jobs %}
+    <a href="{% url 'job' job.id %}" class="col-sm-4 list-group-item list-group-item-action">{{ job }}</a>
+  {% endfor %}
+</div>

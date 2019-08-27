@@ -12,10 +12,10 @@
       <div class="col-sm-6">
         <h2>{{ job }}</h2>
         <p>{{ job.start_date }} - {{ job.end_date }}</p>
-        <p><a href="/category/{{ job.category.slug }}/">
+        <p><a href="{% url 'category' job.category.slug %}">
           {{ job.category }}
         </a></p>
-        <p><a href="/worker/{{ job.user.id }}/">
+        <p><a href="{% url 'worker' job.user.id %}">
           {{ job.user }}
         </a></p>
         <div>

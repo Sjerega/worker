@@ -10,11 +10,7 @@
     <div class="row">
       {% include 'left_sidebar.html' %}
       <div class="col-sm-6">
-        <div class="list-group">
-          {% for job in jobs %}
-            <a href="/job/{{ job.id }}/" class="col-sm-4 list-group-item list-group-item-action">{{ job }}</a>
-          {% endfor %}
-        </div>
+        {% include 'jobs_list.html' %}
       </div>
       <div class="col-sm-3"></div>
     </div>

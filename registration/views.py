@@ -3,6 +3,10 @@ from django.views.generic import View
 from .models import Category, User, Job, Photo
 
 
+# class CategoriesMixin():
+#    pass
+
+
 class IndexView(View):
     template_name = 'index.html'
 
